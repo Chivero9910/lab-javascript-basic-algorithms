@@ -60,8 +60,14 @@ let loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
 
 let counter = 0;
 
+
+
 for(let i= 0; i < loremIpsum.length; i++) {
-    if (loremIpsum[i]){
+    if (loremIpsum[i] === " ") {
+        continue;
+    }
+    else if (loremIpsum[i]){ 
+
         counter += +1;
     }
 }
@@ -69,7 +75,7 @@ for(let i= 0; i < loremIpsum.length; i++) {
 let counterEt = 0;
 
 for(let i= 0; i < loremIpsum.length; i++) {
-    if (loremIpsum[i] === "e" + "t"){
+    if (loremIpsum[i] === "e" + "t"){ // No sabría como sacarlo de momento, supongo que tengo que concatenar la letra "e" y "t" ya que las revisa por separado el loop pero me siga dando valor 0
         counterEt += +1;
     }
 }
